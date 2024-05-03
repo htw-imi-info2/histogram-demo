@@ -12,7 +12,7 @@ class HistogramStarDisplayTest {
     @Test
     void getHistogramSimple() {
         HistogramStarDisplay hsd = new HistogramStarDisplay();
-        int[] frequencyTable = {2};
+        int[] frequencyTable = {6};
         String actual = hsd.getHistogram(frequencyTable);
         String expected = """
                 A: **
