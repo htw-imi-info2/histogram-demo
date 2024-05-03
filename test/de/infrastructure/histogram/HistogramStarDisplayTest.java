@@ -22,6 +22,21 @@ class HistogramStarDisplayTest {
     @Test
     void testGetHistogram() {
         HistogramStarDisplay hsd = new HistogramStarDisplay();
+        int[] frequencyTable = {1,2,3,4};
+        String actual = hsd.getHistogram(frequencyTable);
+        String expected = """
+A: *
+B: **
+C: ***
+D: ****
+""";
+        assertEquals(expected,actual);
+
+    }
+
+    @Test
+    void getHistogram5() {
+        HistogramStarDisplay hsd = new HistogramStarDisplay();
         int[] frequencyTable = {1,2,3,4,5};
         String actual = hsd.getHistogram(frequencyTable);
         String expected = """
