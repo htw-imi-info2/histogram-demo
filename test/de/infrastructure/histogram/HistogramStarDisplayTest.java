@@ -1,18 +1,35 @@
 package de.infrastructure.histogram;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 class HistogramStarDisplayTest {
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
     }
 
-    @org.junit.jupiter.api.AfterEach
-    void tearDown() {
-    }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getHistogram() {
+        HistogramStarDisplay hsd = new HistogramStarDisplay();
+        int[] frequencyTable = {1,2,3,4};
+        String actual = hsd.getHistogram(frequencyTable);
+        String expected = """
+A: *
+B: **
+C: ***
+D: ****
+""";
+        assertEquals(expected,actual);
+
     }
+    public void vertical(){
+        String expected2 = """
+   *
+  **
+ ***
+****
+ABCD
+""";}
 }
