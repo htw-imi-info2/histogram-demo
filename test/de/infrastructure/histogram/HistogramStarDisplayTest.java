@@ -20,7 +20,7 @@ class HistogramStarDisplayTest {
         assertEquals(expected, actual);
     }
     @Test
-    void getHistogram() {
+    void testGetHistogram() {
         HistogramStarDisplay hsd = new HistogramStarDisplay();
         int[] frequencyTable = {1,2,3,4,5};
         String actual = hsd.getHistogram(frequencyTable);
